@@ -1,0 +1,15 @@
+service: my-service
+
+provider:
+  name: aws
+  runtime: python3.6
+  stage: dev
+  region: eu-west-1
+
+
+functions:
+  hello:
+    handler: handler.hello
+    name: my-hello-world-function-alexm
+    events:
+      - http: GET hello
